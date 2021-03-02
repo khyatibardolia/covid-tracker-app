@@ -33,7 +33,7 @@ const App = () => {
       <Chart data={data} country={country}/>
 
       <div className={styles.footer}>
-        <p>©{(new Date().getFullYear())} Code and design by Khyati Bardolia</p>
+        <p>©{(new Date().getFullYear())} covidTracker by Khyati Bardolia</p>
       </div>
     </div>
   );
