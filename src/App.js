@@ -17,7 +17,7 @@ const App = () => {
     const fetchMyAPI = async () => {
       setData(await fetchData());
     };
-    fetchMyAPI()
+    fetchMyAPI();
   }, []);
 
   const handleCountryChange = async (country) => {
@@ -26,16 +26,17 @@ const App = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <img className={styles.image} src={covidLogo} alt={'COVID-19'}/>
-      <Cards data={data} country={country}/>
-      <CountryPicker handleCountryChange={handleCountryChange}/>
-      <Chart data={data} country={country}/>
-
+    <>
+      <div className={styles.container}>
+        <img className={styles.image} src={covidLogo} alt={'COVID-19'}/>
+        <Cards data={data} country={country}/>
+        <CountryPicker handleCountryChange={handleCountryChange}/>
+        <Chart data={data} country={country}/>
+      </div>
       <div className={styles.footer}>
         <p>©{(new Date().getFullYear())} covidTracker by Khyati Bardolia</p>
       </div>
-    </div>
+    </>
   );
 };
 
