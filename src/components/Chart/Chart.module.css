@@ -5,6 +5,8 @@
   width: 70%;
   padding-bottom: 4%;
 }
+
+
 @media (max-width: 770px) {
   .container {
     width: 100% !important;
